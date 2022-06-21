@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}KCET College Predictor {% endblock %}
+{% block scripts_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock scripts_css %}
+{% block content %}
+<div>
+ <form action="/kcet" method="POST">
+    <div class="Rank">
+      <label for="Rank">Rank</label>
+      <input id="Rank" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter Rank" name = "Rank">
+      <small id="emailHelp" class="form-text text-muted">Enter your KCET Rank</small>
+    </div>
+    <div class='set'>
+        <div class='category'>
+          <label for='category'>Category</label>
+          <select name="category">
+            <option value="GM">GM</option>
+            <option value="1G">1G</option>
+            <option value="2AG">2A</option>
+            <option value="2BG">2B</option>
+            <option value="3AG">3A</option>
+            <option value="3BG">3B</option>
+            <option value="SCG">SC</option>
+            <option value="STG">ST</option>
+            <option value="GMK">GMK</option>
+          </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

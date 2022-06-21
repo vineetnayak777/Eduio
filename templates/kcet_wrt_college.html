@@ -1,0 +1,231 @@
+{% extends 'layout.html' %}
+
+{% block title %}KCET College Predictor {% endblock %}
+{% block scripts_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock scripts_css %}
+{% block content %}
+<div>
+ <form action="/kcet_wrt_college" method="POST">
+    <div class="Rank">
+      <label for="Rank">Rank</label>
+      <input id="Rank" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter Rank" name = "Rank">
+      <small id="emailHelp" class="form-text text-muted">Enter your KCET Rank</small>
+    </div>
+    <div class='set'>
+        <div class='category'>
+          <label for='category'>Category</label>
+          <select name="category">
+            <option value="GM">GM</option>
+            <option value="1G">1G</option>
+            <option value="2AG">2A</option>
+            <option value="2BG">2B</option>
+            <option value="3AG">3A</option>
+            <option value="3BG">3B</option>
+            <option value="SCG">SC</option>
+            <option value="STG">ST</option>
+            <option value="GMK">GMK</option>
+          </select>
+        </div>
+    </div>
+    <div class = "set">
+        <div class = 'college'>
+            <label for="college">College</label>
+            <select name = "college">
+                <option value="University Visveswariah College of Engineering">University Visveswariah College of Engineering</option>
+<option value="S K S J T Institute of Engineering">S K S J T Institute of Engineering</option>
+<option value="B M S College of Engineering Basavanagudi">B M S College of Engineering Basavanagudi</option>
+<option value="Dr. Ambedkar Institute Of Technology">Dr. Ambedkar Institute Of Technology</option>
+<option value="R. V. College of Engineering">R. V. College of Engineering</option>
+<option value="M S Ramaiah Institute of Technology">M S Ramaiah Institute of Technology</option>
+<option value="Dayananda Sagara College Of Engineering ">Dayananda Sagara College Of Engineering </option>
+<option value="Bangalore Institute of Technology">Bangalore Institute of Technology</option>
+<option value="P\xa0E\xa0S\xa0University\xa0(Ring\xa0Road\xa0Campus)\xa0">P E S University (Ring Road Campus)</option>
+<option value="M V J College of Engineering">M V J College of Engineering</option>
+<option value="Sir M.Visveswaraya Institute of Technology">Sir M.Visveswaraya Institute of Technology</option>
+<option value="Ghousia Engineering College">Ghousia Engineering College</option>
+<option value="S J C Institute of Technology">S J C Institute of Technology</option>
+<option value="Dr.T.Thimmaiah Institute of Technology">Dr.T.Thimmaiah Institute of Technology</option>
+<option value="Siddaganga Institute of Technology">Siddaganga Institute of Technology</option>
+<option value="Sri Siddartha Institute of Technology">Sri Siddartha Institute of Technology</option>
+<option value="Kalpatharu Institute of Technology">Kalpatharu Institute of Technology</option>
+<option value="Sri Jayachamarajendra College of Engineering">Sri Jayachamarajendra College of Engineering</option>
+<option value="The National Institute of Engineering">The National Institute of Engineering</option>
+<option value="P E S College of Engineering">P E S College of Engineering</option>
+<option value="Malnad College of Engineering">Malnad College of Engineering</option>
+<option value="Tontadarya College of Engineering">Tontadarya College of Engineering</option>
+<option value="Maratha Mandal Engineering College">Maratha Mandal Engineering College</option>
+<option value="KLE Technological University(Formerly BVBCET)">KLE Technological University(Formerly BVBCET)</option>
+<option value="Basaveshwara Engineering College">Basaveshwara Engineering College</option>
+<option value="R.T.E Socity's Rural Engineering College">R.T.E Socity's Rural Engineering College</option>
+<option value="Sri Taralabalu Jagadguru Institute of Technology">Sri Taralabalu Jagadguru Institute of Technology</option>
+<option value="Sri Dharmasthala Manjunatheswara College of Engineering">Sri Dharmasthala Manjunatheswara College of Engineering</option>
+<option value="Anjuman Engineering College Bhatkala">Anjuman Engineering College Bhatkala</option>
+<option value="KLE Technological University(Formerly KLE Dr.MS Sheshagiri Col.)">KLE Technological University(Formerly KLE Dr.MS Sheshagiri Col.)</option>
+<option value="K.L.S. Gogte Institute of Technology">K.L.S. Gogte Institute of Technology</option>
+<option value="B L D E As V.P. Dr. P. G. Hallakatti  College of Engg. and Tech.">B L D E As V.P. Dr. P. G. Hallakatti  College of Engg. and Tech.</option>
+<option value="Hira Sugar Institute of Technology">Hira Sugar Institute of Technology</option>
+<option value="P D A College of Engineering">P D A College of Engineering</option>
+<option value="Khaja Banda Nawaz University">Khaja Banda Nawaz University</option>
+<option value="Gurunanak Dev Engineering College">Gurunanak Dev Engineering College</option>
+<option value="Bheemanna Khandre Institute of Technology">Bheemanna Khandre Institute of Technology</option>
+<option value="Rao Bahadur Y.Mahabaleswarappa Engineering College">Rao Bahadur Y.Mahabaleswarappa Engineering College</option>
+<option value="H K Es S L N College of Engineering">H K Es S L N College of Engineering</option>
+<option value="B M S College of Engineering">B M S College of Engineering</option>
+<option value="N M A M Institute of Technology">N M A M Institute of Technology</option>
+<option value="K V G College of Engineering">K V G College of Engineering</option>
+<option value="P A College of Engineering">P A College of Engineering</option>
+<option value="JSS Science and Technology University(Formerly SJCE)">JSS Science and Technology University(Formerly SJCE)</option>
+<option value="Dr. Ambedkar Institute Of Technology Jnanabharathi Campus">Dr. Ambedkar Institute Of Technology Jnanabharathi Campus</option>
+<option value="University B.D.T. college of Engineering">University B.D.T. college of Engineering</option>
+<option value="Bapuji Institute of Engineering and Technology">Bapuji Institute of Engineering and Technology</option>
+<option value="S J M Institute of Technology">S J M Institute of Technology</option>
+<option value="Adhichunchanagiri Institute of Technology">Adhichunchanagiri Institute of Technology</option>
+<option value="Jawaharlal Nehru National College of Engineering">Jawaharlal Nehru National College of Engineering</option>
+<option value="Vidya Vardhaka College of Engineering">Vidya Vardhaka College of Engineering</option>
+<option value="Ballari Institute of Technology and Management">Ballari Institute of Technology and Management</option>
+<option value="Proudadevaraya Institute of Technology Indiranagar">Proudadevaraya Institute of Technology Indiranagar</option>
+<option value="Vidya Vikas Institute of Engineering and Technology">Vidya Vikas Institute of Engineering and Technology</option>
+<option value="The Oxford College of Engineering">The Oxford College of Engineering</option>
+<option value="Acharya Institute of Technology">Acharya Institute of Technology</option>
+<option value="H M S Institute of Technology">H M S Institute of Technology</option>
+<option value="J S S Academy of Technical Education">J S S Academy of Technical Education</option>
+<option value="H.K.B.K. College of Engineering">H.K.B.K. College of Engineering</option>
+<option value="APS College of Engineering Somanahalli">APS College of Engineering Somanahalli</option>
+<option value="Sri Sairam College of Engineering Anekal">Sri Sairam College of Engineering Anekal</option>
+<option value="Vivekananada Institute of Technology">Vivekananada Institute of Technology</option>
+<option value="Bangalore College of Engineering and Technology Chandapura">Bangalore College of Engineering and Technology Chandapura</option>
+<option value="Sri Revana Siddeswara Institute of Technology">Sri Revana Siddeswara Institute of Technology</option>
+<option value="K S Institute of Technology">K S Institute of Technology</option>
+<option value="Vemana Institute of Technology">Vemana Institute of Technology</option>
+<option value="Basavakalyana Engineering College">Basavakalyana Engineering College</option>
+<option value="Coorg Institute of Technology">Coorg Institute of Technology</option>
+<option value="AMC Engineering College">AMC Engineering College</option>
+<option value="East Point College of Engineering and Technology">East Point College of Engineering and Technology</option>
+<option value="C M R Institute of Technology">C M R Institute of Technology</option>
+<option value="Atria Institute of Technology">Atria Institute of Technology</option>
+<option value="New Horizon College of Engineering">New Horizon College of Engineering</option>
+<option value="K N S Institute of Technology">K N S Institute of Technology</option>
+<option value="Channabasaveshwara Institute of Technology Gubbi">Channabasaveshwara Institute of Technology Gubbi</option>
+<option value="DONBOSCO Institute of Technology">DONBOSCO Institute of Technology</option>
+<option value="Global Academy of Technology">Global Academy of Technology</option>
+<option value="Nagarjuna College of Engineering and Technology">Nagarjuna College of Engineering and Technology</option>
+<option value="Nitte Meenakshi Institutute of Technology">Nitte Meenakshi Institutute of Technology</option>
+<option value="East West Institute of Technology">East West Institute of Technology</option>
+<option value="B N M Institute of Technology ">B N M Institute of Technology </option>
+<option value="Sapthagiri College of Engineering">Sapthagiri College of Engineering</option>
+<option value="City Engineering College">City Engineering College</option>
+<option value="Sri Venkateshwara College of Engineering">Sri Venkateshwara College of Engineering</option>
+<option value="Sri Krishna Institute of Technology">Sri Krishna Institute of Technology</option>
+<option value="Sambhram Institute of Technology">Sambhram Institute of Technology</option>
+<option value="G M Institute of Technology">G M Institute of Technology</option>
+<option value="S J B Institute of Technology Kengeri">S J B Institute of Technology Kengeri</option>
+<option value="R.L.Jalappa Institute of Technology">R.L.Jalappa Institute of Technology</option>
+<option value="RNS Institute of Technology">RNS Institute of Technology</option>
+<option value="K C T Engineering College Roza(B)">K C T Engineering College Roza(B)</option>
+<option value="Jnanavikasa Institute of Technology">Jnanavikasa Institute of Technology</option>
+<option value="Vivekananada College of Engineering Technology">Vivekananada College of Engineering Technology</option>
+<option value="Canara Engineering College">Canara Engineering College</option>
+<option value="Rajiv Gandhi Institute of Technology R.T Nagar Post">Rajiv Gandhi Institute of Technology R.T Nagar Post</option>
+<option value="B M S Institute of Technology and Management">B M S Institute of Technology and Management</option>
+<option value="M S Engineering College">M S Engineering College</option>
+<option value="Sharnbasva University Brahmpur">Sharnbasva University Brahmpur</option>
+<option value="St. Joseph Engineering College">St. Joseph Engineering College</option>
+<option value="Shridevi Institute of Engineering and Technology">Shridevi Institute of Engineering and Technology</option>
+<option value="Secab Institute of Engineering and Technology">Secab Institute of Engineering and Technology</option>
+<option value="G S S S Institute of Engineering and Technology for Women">G S S S Institute of Engineering and Technology for Women</option>
+<option value="Smt. Kamala and Sri Venkappa M.Agadi College of Engg. and Tech. LaxmeshwaraTq">Smt. Kamala and Sri Venkappa M.Agadi College of Engg. and Tech. LaxmeshwaraTq</option>
+<option value="K L S Viswanathrao Deshpande Institute of Technology">K L S Viswanathrao Deshpande Institute of Technology</option>
+<option value="Moodalakatte Institute of Technology">Moodalakatte Institute of Technology</option>
+<option value="Impact College of Engineering and Applied Sciences">Impact College of Engineering and Applied Sciences</option>
+<option value="P E S University (Electronic City Campus)">P E S University (Electronic City Campus)</option>
+<option value="Adichunchanagiri University(Formerly BGSIT) Nagamangala Taluk">Adichunchanagiri University(Formerly BGSIT) Nagamangala Taluk</option>
+<option value="Srinivas Institute of Technology">Srinivas Institute of Technology</option>
+<option value="Rajarajeswari College of Engineering Kumbalagodu">Rajarajeswari College of Engineering Kumbalagodu</option>
+<option value="Shree Devi Institute of Technology Kenjar">Shree Devi Institute of Technology Kenjar</option>
+<option value="T.John Engineering College">T.John Engineering College</option>
+<option value="Cambridge Institute of Technology">Cambridge Institute of Technology</option>
+<option value="P E S Institute of Technology and Management">P E S Institute of Technology and Management</option>
+<option value="S D M Institute of Tech. Ujire">S D M Institute of Tech. Ujire</option>
+<option value="S E A College of Engineering and Technology">S E A College of Engineering and Technology</option>
+<option value="Government Engineering College">Government Engineering College</option>
+<option value="Government Engineering College,K R Pet">Government Engineering College,K R Pet</option>
+<option value="Maharaja Institute of TechnologyMysore Belawadi">Maharaja Institute of TechnologyMysore Belawadi</option>
+<option value="Karavali Institute of Technology">Karavali Institute of Technology</option>
+<option value="Sahyadri College of Engg. and Management">Sahyadri College of Engg. and Management</option>
+<option value="Government Engineering College Kushalnagar">Government Engineering College Kushalnagar</option>
+<option value="Government Engineering College Huvina Hadagali">Government Engineering College Huvina Hadagali</option>
+<option value="Yenepoya Institute of Technology">Yenepoya Institute of Technology</option>
+<option value="K L E Institute of Technology">K L E Institute of Technology</option>
+<option value="K L E Ss K L E College of Engineering and Technology Chikkodi">K L E Ss K L E College of Engineering and Technology Chikkodi</option>
+<option value="Amrutha Institute of Engineering and Mangement">Amrutha Institute of Engineering and Mangement</option>
+<option value="Alva`s Institute of Engineering and Technology">Alva`s Institute of Engineering and Technology</option>
+<option value="Brindavan College of Engineering">Brindavan College of Engineering</option>
+<option value="R.R.Institute of Technology Chikkabanavara">R.R.Institute of Technology Chikkabanavara</option>
+<option value="Sai Vidya Institute of Technology">Sai Vidya Institute of Technology</option>
+<option value="Dr. Sri. Sri. Sri. Shivakumara Mahaswamyji College of Engineering">Dr. Sri. Sri. Sri. Shivakumara Mahaswamyji College of Engineering</option>
+<option value="S.G.Balekundri Institute of Technology">S.G.Balekundri Institute of Technology</option>
+<option value="Navodaya Institute of Technology">Navodaya Institute of Technology</option>
+<option value="Rajeev Institute of Technology">Rajeev Institute of Technology</option>
+<option value="N I E Institute of Technology">N I E Institute of Technology</option>
+<option value="Bearys Institute of Technology">Bearys Institute of Technology</option>
+<option value="ShaShib College of Engineering">ShaShib College of Engineering</option>
+<option value="C Byre Gowda Institute of Technology">C Byre Gowda Institute of Technology</option>
+<option value="Angadi Institute of Technology and Management">Angadi Institute of Technology and Management</option>
+<option value="ACS College of Engineering">ACS College of Engineering</option>
+<option value="Vijaya Vittala Institute of Technology">Vijaya Vittala Institute of Technology</option>
+<option value="Navkis College of Engineering (Formerly NDRKIT)">Navkis College of Engineering (Formerly NDRKIT)</option>
+<option value="Akshaya Institute of Technology">Akshaya Institute of Technology</option>
+<option value="Srinivas University Mukka, Suratkal">Srinivas University Mukka, Suratkal</option>
+<option value="Jain College of Engineering Machche">Jain College of Engineering Machche</option>
+<option value="Veerappa Nisty Engineering College">Veerappa Nisty Engineering College</option>
+<option value="Sharnbasva University College for Women(Formerly Godutai)">Sharnbasva University College for Women(Formerly Godutai)</option>
+<option value="AGM Rural Engineering College Hubli">AGM Rural Engineering College Hubli</option>
+<option value="Sampoorna Institute of Technology and Research">Sampoorna Institute of Technology and Research</option>
+<option value="K.S. School of Engineering And Management Mallasandra">K.S. School of Engineering And Management Mallasandra</option>
+<option value="Bangalore Technological Institute">Bangalore Technological Institute</option>
+<option value="ATME College of Engineering Varun hobli">ATME College of Engineering Varun hobli</option>
+<option value="Shri Madhwa Vadiraja Institute of Technology and Management">Shri Madhwa Vadiraja Institute of Technology and Management</option>
+<option value="VSMs Somashekar R Kothiwale Institute of Technology">VSMs Somashekar R Kothiwale Institute of Technology</option>
+<option value="Achutha Institute of Technology">Achutha Institute of Technology</option>
+<option value="Jyothi Institute ofTechnology">Jyothi Institute of Technology</option>
+<option value="G Madegowda Institute of Technology">G Madegowda Institute of Technology</option>
+<option value="Jain Institute of Technology Cross">Jain Institute of Technology Cross</option>
+<option value="Dayananda Sagar Academy of Technology Kanakapur Main Road">Dayananda Sagar Academy of Technology Kanakapur Main Road</option>
+<option value="Lingarajappa Engineering College">Lingarajappa Engineering College</option>
+<option value="Shetty Institute of Technology">Shetty Institute of Technology</option>
+<option value="Girijabai Sail Institute of Technology Majali Village">Girijabai Sail Institute of Technology Majali Village</option>
+<option value="Mangalore Marine College and Technology">Mangalore Marine College and Technology</option>
+<option value="Alliance University">Alliance University</option>
+<option value="Biluru Gurubasva Mahaswamiji Institute of Technology Mudhol">Biluru Gurubasva Mahaswamiji Institute of Technology Mudhol</option>
+<option value="Cambridge Institutute of TechnologyNorth Campus">Cambridge Institutute of TechnologyNorth Campus</option>
+<option value="Cauvery Institute of Technology ">Cauvery Institute of Technology </option>
+<option value="Reva University">Reva University</option>
+<option value="M.S. Ramaiah University of Applied Sciences">M.S. Ramaiah University of Applied Sciences</option>
+<option value="Presidency University">Presidency University</option>
+<option value="Mysuru Royal Institute of Technology">Mysuru Royal Institute of Technology</option>
+<option value="East West College of Engineering Yelahanka New Town">East West College of Engineering Yelahanka New Town</option>
+<option value="Dayananda Sagar University Hosur Road">Dayananda Sagar University Hosur Road</option>
+<option value="Mysore College of Engineering and Management">Mysore College of Engineering and Management</option>
+<option value="A J Institute of Engineering and Technology">A J Institute of Engineering and Technology</option>
+<option value="Gitam School Of Technology">Gitam School Of Technology</option>
+<option value="CMR University Chagalatti">CMR University Chagalatti</option>
+<option value="Maharaja Institute of Technology">Maharaja Institute of Technology</option>
+<option value="Nitte School of Architecture Yelahanka">Nitte School of Architecture Yelahanka</option>
+<option value="School of Planning and Architecture">School of Planning and Architecture</option>
+<option value="Jain College of Engineering and Technology">Jain College of Engineering and Technology</option>
+<option value="Jain College of Engineering and Research Udyambhag">Jain College of Engineering and Research Udyambhag</option>
+<option value="Government Engineering College Talakal">Government Engineering College Talakal</option>
+<option value="Government Engineering College Viprasainagar">Government Engineering College Viprasainagar</option>
+<option value="R V Institute of Technology and Management JP Nagar">R V Institute of Technology and Management JP Nagar</option>
+<option value="Visvesvaraya Technological University Muddenahalli">Visvesvaraya Technological University Muddenahalli</option>
+<option value="Visvesvaraya Technological University">Visvesvaraya Technological University</option>
+<option value="Government Engineering College Challakere">Government Engineering College Challakere</option>
+<option value="University of Mysore">University of Mysore</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

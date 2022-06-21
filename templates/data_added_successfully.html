@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block scripts_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock scripts_css %}
+
+{% block title %}Event Added Successfully{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <p class="heading">Event Data Added Successfully</p>
+      </div>
+</div>
+{% endblock %}

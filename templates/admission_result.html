@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block scripts_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock scripts_css %}
+
+{% block title %}UCLA Admission Predictor{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <p class="heading">Chance of Admission: {{ result }} with model accuracy: {{ score }}</p>
+      </div>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<p>Welcome back, {{ username }}!</p>
+{% endblock %}
+{% block scripts_css %}
+  <script src="{{ url_for('static', filename='css/style.css') }}"></script>
+{% endblock scripts_css %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block scripts_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock scripts_css %}
+
+{% block title %}KCET College Predictor{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <p class="heading">As per the data obtained, you will {{ msg1 }} get : {{ msg }}</p>
+      </div>
+</div>
+{% endblock %}

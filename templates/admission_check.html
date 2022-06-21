@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title %}Admission Predictor {% endblock %}
+{% block scripts_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock scripts_css %}
+{% block content %}
+<div>
+ <form action="/admission_check" method="POST">
+    <div class="gre">
+      <label for="gre">GRE Score</label>
+      <input id="gre" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter GRE Score" name = "gre" min="290" max="340" step="any">
+      <small id="emailHelp" class="form-text text-muted">Enter your GRE Score</small>
+    </div>
+    <div class="toefl">
+        <label for="toefl">TOEFL Score</label>
+        <input id="toefl" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter TOEFL Score" name = "toefl" min="92" max="120" step="any">
+        <small id="emailHelp" class="form-text text-muted">Enter your TOEFL Score</small>
+    </div>
+    <div class="rating">
+        <label for="rating">University Rating</label>
+        <input id="rating" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter rating Score" name = "rating" min="1" max="5" step="any">
+        <small id="emailHelp" class="form-text text-muted">Enter University Rating</small>
+    </div>
+    <div class="sop">
+        <label for="sop">Statement of Purpose</label>
+        <input id="sop" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter sop Score" name = "sop" min="1" max="5" step="any">
+        <small id="emailHelp" class="form-text text-muted">Enter SOP Score</small>
+      </div>
+      <div class="lor">
+        <label for="lor">Letter of Recommendation</label>
+        <input id="lor" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter lor Score" name = "lor" min="1" max="5" step="any">
+        <small id="emailHelp" class="form-text text-muted">Enter your lor Score</small>
+      </div>
+      <div class="cgpa">
+        <label for="cgpa">CGPA</label>
+        <input id="cgpa" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter cgpa Score" name = "cgpa" min="5" max="10" step="any">
+        <small id="emailHelp" class="form-text text-muted">Enter your cgpa</small>
+      </div>
+      <div class='set'>
+        <div class='research'>
+          <label for='research'>Research</label>
+          <select name="research">
+            <option value= 0 >0</option>
+            <option value= 1>1</option>
+          </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

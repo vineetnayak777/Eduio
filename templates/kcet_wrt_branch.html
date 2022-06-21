@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+
+{% block title %}KCET College Predictor {% endblock %}
+{% block scripts_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock scripts_css %}
+{% block content %}
+<div>
+ <form action="/kcet_wrt_branch" method="POST">
+    <div class="Rank">
+      <label for="Rank">Rank</label>
+      <input id="Rank" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter Rank" name = "Rank">
+      <small id="emailHelp" class="form-text text-muted">Enter your KCET Rank</small>
+    </div>
+    <div class='set'>
+        <div class='category'>
+          <label for='category'>Category</label>
+          <select name="category">
+            <option value="GM">GM</option>
+            <option value="1G">1G</option>
+            <option value="2AG">2A</option>
+            <option value="2BG">2B</option>
+            <option value="3AG">3A</option>
+            <option value="3BG">3B</option>
+            <option value="SCG">SC</option>
+            <option value="STG">ST</option>
+            <option value="GMK">GMK</option>
+          </select>
+        </div>
+    </div>
+    <div class = "set">
+        <div class = 'branch'>
+            <label for="branch">Branch</label>
+            <select name = "branch">
+                <option value="AI">AI</option>
+<option value="CE">CE</option>
+<option value="CS">CS</option>
+<option value="EC">EC</option>
+<option value="EE">EE</option>
+<option value="IE">IE</option>
+<option value="ME">ME</option>
+<option value="ST">ST</option>
+<option value="TX">TX</option>
+<option value="IM">IM</option>
+<option value="EI">EI</option>
+<option value="ET">ET</option>
+<option value="BT">BT</option>
+<option value="CH">CH</option>
+<option value="SE">SE</option>
+<option value="AD">AD</option>
+<option value="CA CS">CA CS</option>
+<option value="CY CS">CY CS</option>
+<option value="MD">MD</option>
+<option value="AE">AE</option>
+<option value="AU">AU</option>
+<option value="CD">CD</option>
+<option value="IM ">IM </option>
+<option value="DS">DS</option>
+<option value="OT">OT</option>
+<option value="TC">TC</option>
+<option value="BS">BS</option>
+<option value="CA CS ">CA CS </option>
+<option value="CK">CK</option>
+<option value="MN">MN</option>
+<option value="EL">EL</option>
+<option value="EN">EN</option>
+<option value="IP">IP</option>
+<option value="PT">PT</option>
+<option value="EA">EA</option>
+<option value="RI">RI</option>
+<option value="BM">BM</option>
+<option value="CC">CC</option>
+<option value="CB">CB</option>
+<option value="CT">CT</option>
+<option value="CR">CR</option>
+<option value="MT">MT</option>
+<option value="RA">RA</option>
+<option value="CO">CO</option>
+<option value="CF CS">CF CS</option>
+<option value="EG">EG</option>
+<option value="RO">RO</option>
+<option value="MR">MR</option>
+<option value="IC">IC</option>
+<option value="MM">MM</option>
+<option value="MK">MK</option>
+<option value="IG">IG</option>
+<option value="BE">BE</option>
+<option value="CI">CI</option>
+<option value="ER">ER</option>
+<option value="ES">ES</option>
+<option value="SS">SS</option>
+<option value="AT">AT</option>
+<option value="MC">MC</option>
+<option value="RB">RB</option>
+<option value="BD CS">BD CS</option>
+<option value="CG">CG</option>
+<option value="IO CS">IO CS</option>
+<option value="IS">IS</option>
+<option value="LC CS">LC CS</option>
+<option value="OP">OP</option>
+<option value="PL">PL</option>
+<option value="CF">CF</option>
+<option value="II">II</option>
+<option value="IT">IT</option>
+<option value="UP Planning">UP Planning</option>
+<option value="BR">BR</option>
+<option value="CV">CV</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block scripts_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock scripts_css %}
+
+{% block title %}{{ college }} Activities{% endblock %}
+
+{% block content %}
+<p class="heading">{{ college }} Events</p>
+<div style="text-align: center;" >
+    <table width="100%" style="border: 1px solid black; text-align: center;border-collapse: collapse;">
+        <tr style="border: 1px solid black;">
+            <th width="(100/6)%" style="border: 1px solid black;">Posted By</th>
+            <th width="(100/6)%" style="border: 1px solid black;">Event Title</th>
+            <th width="(100/6)%" style="border: 1px solid black;">Event College</th>
+            <th width="(100/6)%" style="border: 1px solid black;">Event Description</th>
+            <th width="(100/6)%" style="border: 1px solid black;">Event Link</th>
+            <th width="(100/6)%" style="border: 1px solid black;">Event Link</th>
+        </tr>
+        {% for result in results %} 
+            <tr width="100%" style="border: 1px solid black;">
+                <td width="(100/6)%" style="border: 1px solid black;">{{result["username"]}}</td>
+                <td width="(100/6)%" style="border: 1px solid black;">{{result["title"]}}</td>
+                <td width="(100/6)%" style="border: 1px solid black;">{{result["college"]}}</td>
+                <td width="(100/6)%" style="border: 1px solid black;">{{result["description"]}}</td>
+                <td width="(100/6)%" style="border: 1px solid black;">{{result["link"]}}</td>
+                <td width="(100/6)%" style="border: 1px solid black;">{{result["date_of_event"]}}</td>
+                <td style="border: 1px solid black;"></td>
+            </tr>
+        {% endfor %}
+    </table>
+</br>
+</div>
+{% endblock %}

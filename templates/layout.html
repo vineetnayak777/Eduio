@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% block title %}{% endblock %}</title>
+		<script src="https://kit.fontawesome.com/e2ac9cc532.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		{% block scripts_css %}
+    	{% endblock scripts_css %}
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>EDUIO</h1>
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+				<a href="{{ url_for('jee_render') }}"><i class="fas fa-graduation-cap">JEE</i></a>
+				<a href="{{ url_for('kcet_yes_or_no_render') }}"><i class="fas fa-graduation-cap">KCET - Check</i></a>
+				<a href="{{ url_for('kcet_wrt_college_render') }}"><i class="fas fa-graduation-cap">KCET - College</i></a>	
+				<a href="{{ url_for('kcet_wrt_branch_render') }}"><i class="fas fa-graduation-cap">KCET - Branch</i></a>
+				<a href="{{ url_for('kcet_render') }}"><i class="fas fa-graduation-cap">KCET</i></a>
+				<a href="{{ url_for('admission_check_render') }}"><i class="fas fa-graduation-cap">Admission Checker</i></a>
+				<a href="{{ url_for('add_event_data_render') }}"><i class="fas fa-envelope">Add College Event</i></a>
+				<a href="{{ url_for('view_college_event_render') }}"><i class="fas fa-envelope">View College Event</i></a>
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>
