@@ -1,36 +1,95 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{% block title %}{% endblock %}</title>
-		<script src="https://kit.fontawesome.com/e2ac9cc532.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		{% block scripts_css %}
-    	{% endblock scripts_css %}
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-		
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-	</head>
-	<body class="loggedin">
-		<nav class="navtop">
-			<div>
-				<h1>EDUIO</h1>
-                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
-				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
-				<a href="{{ url_for('jee_render') }}"><i class="fas fa-graduation-cap">JEE</i></a>
-				<a href="{{ url_for('kcet_yes_or_no_render') }}"><i class="fas fa-graduation-cap">KCET - Check</i></a>
-				<a href="{{ url_for('kcet_wrt_college_render') }}"><i class="fas fa-graduation-cap">KCET - College</i></a>	
-				<a href="{{ url_for('kcet_wrt_branch_render') }}"><i class="fas fa-graduation-cap">KCET - Branch</i></a>
-				<a href="{{ url_for('kcet_render') }}"><i class="fas fa-graduation-cap">KCET</i></a>
-				<a href="{{ url_for('admission_check_render') }}"><i class="fas fa-graduation-cap">Admission Checker</i></a>
-				<a href="{{ url_for('add_event_data_render') }}"><i class="fas fa-envelope">Add College Event</i></a>
-				<a href="{{ url_for('view_college_event_render') }}"><i class="fas fa-envelope">View College Event</i></a>
-			</div>
-		</nav>
-		<div class="content">
-			{% block content %}{% endblock %}
-		</div>
-	</body>
+<html lang="en">
+    
+    <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>{% block title %}{% endblock %}</title>
+          <!--CSS-->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+          <!--Bootstrap-->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <!--Js-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+          {% block scripts_css %}
+    	  {% endblock scripts_css %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">EDUIO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('home') }}">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                KCET Prediction
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{{ url_for('kcet_render') }}">KCET</a>
+                <a class="dropdown-item" href="{{ url_for('kcet_wrt_college_render') }}">KCET COLLEGE</a>
+                <a class="dropdown-item" href="{{ url_for('kcet_wrt_branch_render') }}">KCET BRANCH</a>
+                <a class="dropdown-item" href="{{ url_for('kcet_yes_or_no_render') }}">KCET COLLEGE & BRANCH</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  JEE Prediction
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{{ url_for('jee_render') }}">JEE College Prediction</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    UCAL Admission Prediction
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{{ url_for('admission_check_render') }}">Admission Prediction</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  About Us
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('profile') }}" aria-haspopup="true" aria-expanded="false">
+                  Profile
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}" aria-haspopup="true" aria-expanded="false">
+                  Log Out
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  News Module
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{{ url_for('add_event_data_render') }}">Add News</a>
+                  <a class="dropdown-item" href="{{ url_for('view_college_event_render') }}">View Event News</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+        <footer style="background-color: #212121; text-align: center; bottom: 0; position:fixed; left:0; width: 100%;">
+            <p style="color: white; padding: 10px 0 ;">Made with ❤ by Team EDUIO</p>
+          </footer>
+    </body>
+
 </html>

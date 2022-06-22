@@ -9,6 +9,9 @@ body {
     background-color: #435165;
     margin: 0;
 }
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
 .login, .register {
     width: 400px;
     background-color: #ffffff;
@@ -140,9 +143,12 @@ body.loggedin {
 .content > p table td:first-child, .content > div table td:first-child {
   font-weight: bold;
   color: #4a536e;
-  padding-right: 15px;
 }
 .content > div p {
   padding: 5px;
   margin: 0 0 10px 0;
+}
+
+.res {
+    align-items: center;
 }
