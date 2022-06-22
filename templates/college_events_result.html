@@ -16,7 +16,7 @@
             <th width="(100/6)%" style="border: 1px solid black;">Event College</th>
             <th width="(100/6)%" style="border: 1px solid black;">Event Description</th>
             <th width="(100/6)%" style="border: 1px solid black;">Event Link</th>
-            <th width="(100/6)%" style="border: 1px solid black;">Event Link</th>
+            <th width="(100/6)%" style="border: 1px solid black;">Event Date</th>
         </tr>
         {% for result in results %} 
             <tr width="100%" style="border: 1px solid black;">
@@ -26,7 +26,6 @@
                 <td width="(100/6)%" style="border: 1px solid black;">{{result["description"]}}</td>
                 <td width="(100/6)%" style="border: 1px solid black;">{{result["link"]}}</td>
                 <td width="(100/6)%" style="border: 1px solid black;">{{result["date_of_event"]}}</td>
-                <td style="border: 1px solid black;"></td>
             </tr>
         {% endfor %}
     </table>

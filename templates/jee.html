@@ -2,27 +2,10 @@
 
 {% block title %}Jee College Predictor {% endblock %}
 {% block scripts_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/jeestyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock scripts_css %}
 {% block content %}
 <div class='signup-container'>
-  <div class='left-container'>
-
-    <h1>
-      <a href="/" style="color:black">
-        <i class='fas fa-graduation-cap' alt="Graduation Cap"></i>
-        <br><br>
-        <b>
-          College Predictor
-        </b>
-      </a>
-    </h1>
-    <div class="puppy">
-      <p>Our algorithm predicts your branches and colleges based on the cutoff lists of previous years</p>
-      <p>We only show the top colleges based on previous ranks.</p>
-      <p class="disclaimer">We are not affiliated with NTA or JOSAA.</p>
-    </div>
-  </div>
   <div class='right-container container-fluid h-auto '>
     {% block headerTitle %}
 
@@ -143,7 +126,7 @@
     </header>
     <footer>
         <div class='set' id="myfooter">
-          <button id='next'>Next</button>
+          <button id='next' class="btn btn-primary">Next</button>
         </div>
       </footer>
     </form>

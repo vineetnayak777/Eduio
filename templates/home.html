@@ -4,6 +4,9 @@
 
 {% block content %}
 <p>Welcome back, {{ username }}!</p>
+<div>
+  <img src="..//images/home.png" alt = "home page">
+</div>
 {% endblock %}
 {% block scripts_css %}
   <script src="{{ url_for('static', filename='css/style.css') }}"></script>

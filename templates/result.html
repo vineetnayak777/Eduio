@@ -1,48 +1,32 @@
 {% extends "layout.html" %}
 
 {% block scripts_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/rstyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock scripts_css %}
 
 {% block title %}Jee College Predictor{% endblock %}
 
 {% block content %}
-
-<div class='signup-container'>
-  <div class='left-container'>
-    <h1>
-      <a href="/jee" style="color:black">
-        <i class='fas fa-graduation-cap'></i>
-        <b>
-          College Predictor 2022
-        </b>
-      </a>
-    </h1>
-    <div class="puppy">
+  <div>
+    <div>
       <p>Thank you for choosing our services</p>
       <p>Based on your data, results are:</p>
     </div>
-
-  </div>
-  <div class='right-container'>
-    {% block headerTitle %}
     <h1>Congratulations ! <br>
       <div class="lines">Your expected {{category}} rank: <br>
         <bold>{{ranks}}</bold>
       </div>
     </h1>
-    {% endblock headerTitle %}
 
-    <div class='state clg_list'>
+    <div>
       <p class="heading">As per the data obtained, you might get:</p>
     </div>
 
-    <table class="res">
+    <center><table class="res">
       {% for table in tables %}
-      {{titles[loop.index]}}
-      {{ table|safe }}
+      <center>{{ table|safe }}</center>
       {% endfor %}
-    </table>
+    </table></center>
     <footer>
       <div class='set'>
         <button id='next' onclick="window.location.href='/jee'">Back</button>
@@ -50,6 +34,6 @@
     </footer>
 
   </div>
-</div>
+
 
 {% endblock %}
