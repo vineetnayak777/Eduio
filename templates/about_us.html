@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div><center><p>About Us!</p></center></div>
+
+<div>
+  <img src="../static/images/about_us.png" alt = "home page" width = "950px">
+</div>
+<div>
+    <img src="../static/images/mentor.png" alt = "home page" width = "950px">
+</div>
+{% endblock %}
+{% block scripts_css %}
+  <script src="{{ url_for('static', filename='css/style.css') }}"></script>
+{% endblock scripts_css %}

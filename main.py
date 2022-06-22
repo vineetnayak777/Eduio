@@ -258,6 +258,11 @@ def view_college_event_render():
         return render_template('search_college_event.html')
     return redirect(url_for('login'))
 
+@app.route('/about_us')
+def about_us_render():
+    if 'loggedin' in session:
+        return render_template('about_us.html')
+    return redirect(url_for('login'))
 
 if __name__ == '__main__':
     app.run(debug=True)
